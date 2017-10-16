@@ -98,3 +98,7 @@ You can use the *thumb_size* variable. Example `[thisorthat thumb_size="medium"]
 
 ## 1.0.3
 - Fixed several Javascript bugs. With help from gdibble.
+
+## 1.1.0
+- Fixed Multisite handling
+- Added CSS for rankings
