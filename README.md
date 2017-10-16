@@ -62,7 +62,7 @@ Read more on the [plugin website](http://andreboekhorst.nl/wordpress/this-or-tha
 ## Frequently Asked Questions
 
 1. How do I get started
-...You can use the plugin anywhere in your websites content. First make sure you have some content to compare by adding items to the *This-or-That* post-type in the Admin. Make sure to add some featured images! When this has been done, you can add the shortcode `[thisorthat]` to any of your posts or pages.
+..* You can use the plugin anywhere in your websites content. First make sure you have some content to compare by adding items to the *This-or-That* post-type in the Admin. Make sure to add some featured images! When this has been done, you can add the shortcode `[thisorthat]` to any of your posts or pages.
 2. How do I display the ranking list
 ...This van be done by using the shortcode `[thisorthat_ranking]`.
 1. How to use my own Posts types?
