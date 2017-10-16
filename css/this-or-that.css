@@ -1,0 +1,235 @@
+/*
+Plugin Name: This-or-That by André Boekhorst
+Plugin URI: http://andreboekhorst.nl/wordpress/this-or-that-plugin/
+Description: Let your visitors vote between posts and images to create honest ranking lists. Uses the ELO Algorithm and works with your site's existing content.
+Version: 1.0
+Author: André Boekhorst
+Author URI: http://www.andreboekhorst.nl
+License: GPL2
+*/
+
+#this-or-that{
+	width: 100%;
+	min-height: 200px;
+	margin: 1em 0;
+	display: block;
+	background-image: url('../img/seperat_or.png');
+	background-repeat: no-repeat;
+	background-position: 50% 35%;
+}
+
+#this-or-that:before,
+#this-or-that:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+#this-or-that:after {
+    clear: both;
+}
+
+.this-or-that_column{
+	width: 50%;
+	min-height: 100px;
+	float: left;
+	display: block;
+	margin: 0;
+}
+
+.this-or-that_column .this-or-that_item{ margin: 0 10% 0 0; }
+.this-or-that_column:last-child .this-or-that_item{ margin: 0 0 0 10%; }
+
+.this-or-that_column .this-or-that_item{
+	text-align: center;
+	opacity: 1;
+
+}
+
+.this-or-that_column .this-or-that_item.selected{
+	transition: all .4s ease;
+	transform: scale(1.4);
+	opacity: 0;
+}
+
+.this-or-that_thumbwrapper{
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	padding: 3%;
+	overflow: hidden;
+	display: block;
+	background-color: #fff;
+	transition: box-shadow .2s ease,
+				transform .3s ease;
+	-webkit-transition: box-shadow .2s ease,
+						-webkit-transform .3s ease;
+}
+
+.this-or-that_thumbwrapper:hover{
+	box-shadow: 1px 2px 2px #666;
+
+	-webkit-transform: rotate(2deg);
+	-moz-transform: rotate(2deg);
+	-ms-transform: rotate(2deg);
+	-o-transform: rotate(2deg);
+	transform: rotate(2deg);
+}
+
+.this-or-that_column:first-child .this-or-that_thumbwrapper:hover{
+	box-shadow: -1px 2px 2px #666;
+
+	-webkit-transform: rotate(-2deg);
+	-moz-transform: rotate(-2deg);
+	-ms-transform: rotate(-2deg);
+	-o-transform: rotate(-2deg);
+	transform: rotate(-2deg);
+}
+
+.this-or-that_thumbwrapper a img{
+	display: block;
+	width: 100%;
+	max-width: 100% !important;
+	height: auto;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-shadow: none;
+	border-radius: 2px;
+}
+
+.this-or-that_thumbwrapper a{
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+#this-or-that h3{
+	margin: 5px 0;
+	padding: 0;
+	font-size: 20px;
+}
+#this-or-that h3 a{
+	text-decoration: none;
+}
+
+#this-or-that.round .this-or-that_thumbwrapper,
+#this-or-that.round .this-or-that_thumbwrapper a img{
+		border-radius: 100%;
+}
+
+/* Listings */
+ol.this_that_ranking_list, ol.this_that_ranking_list li{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+
+
+
+.this_that_ranking_list li:before,
+.this_that_ranking_list li:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.this_that_ranking_list li:after {
+    clear: both;
+}
+
+.this_that_ranking_list .thisorthat_right h3{
+	margin: 0;
+	padding: 0;
+}
+
+.this_that_ranking_list .thisorthat_left{
+	display: block;
+	float: left;
+	width: 30%;
+}
+.this_that_ranking_list .thisorthat_left .thisorthat_thumb{
+	margin: 0 2em 2em 0;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	padding: 3%;
+	overflow: hidden;
+	display: block;
+	background-color: #fff;
+	transition: box-shadow .2s ease,
+				transform .3s ease;
+	-webkit-transition: box-shadow .2s ease,
+						-webkit-transform .3s ease;
+}
+.this_that_ranking_list .thisorthat_right{
+	display: block;
+	float: left;
+	width: 70%;
+}
+.this_that_ranking_list .count {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.this_that_ranking_list .thisorthat_meta{
+	margin: .5em 0;
+	font-size: .875em;
+}
+
+.thisorthat_rating, .thisorthat_wins{
+	border-right: 1px solid #ccc;
+	padding-right: .5em;
+	margin-right: .5em;
+}
+
+
+
+
+.star-five {
+   margin: 50px 0;
+   position: relative;
+   display: block;
+   color: red;
+   width: 0px;
+   height: 0px;
+   border-right:  100px solid transparent;
+   border-bottom: 70px  solid red;
+   border-left:   100px solid transparent;
+   -moz-transform:    rotate(35deg);
+   -webkit-transform: rotate(35deg);
+   -ms-transform:     rotate(35deg);
+   -o-transform:      rotate(35deg);
+}
+.star-five:before {
+   border-bottom: 80px solid red;
+   border-left: 30px solid transparent;
+   border-right: 30px solid transparent;
+   position: absolute;
+   height: 0;
+   width: 0;
+   top: -45px;
+   left: -65px;
+   display: block;
+   content: '';
+   -webkit-transform: rotate(-35deg);
+   -moz-transform:    rotate(-35deg);
+   -ms-transform:     rotate(-35deg);
+   -o-transform:      rotate(-35deg);
+
+}
+.star-five:after {
+   position: absolute;
+   display: block;
+   color: red;
+   top: 3px;
+   left: -105px;
+   width: 0px;
+   height: 0px;
+   border-right: 100px solid transparent;
+   border-bottom: 70px solid red;
+   border-left: 100px solid transparent;
+   -webkit-transform: rotate(-70deg);
+   -moz-transform:    rotate(-70deg);
+   -ms-transform:     rotate(-70deg);
+   -o-transform:      rotate(-70deg);
+   content: '';
+}
