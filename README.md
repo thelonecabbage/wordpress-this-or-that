@@ -51,7 +51,7 @@ There are plenty of ways to use this plugin; get some insight in what your visit
 
 Read more on the [plugin website](http://andreboekhorst.nl/wordpress/this-or-that-plugin/ "Andr&eactute Boekhorst").
 
-=## Installation
+## Installation
 
 1. Unzip and upload the "this-or-that" folder to the "/wp-content/plugins/" directory.
 2. Activate the plugin through the "Plugins" menu in WordPress.
@@ -59,20 +59,17 @@ Read more on the [plugin website](http://andreboekhorst.nl/wordpress/this-or-tha
 4. Add the shortcode `[thisorthat]` to the page where you want people to compare the different items
 5. Add the shortcode `[thisorthat_ranking]` to the page where you want to view the ranking list.
 
-=## Frequently Asked Questions
+## Frequently Asked Questions
 
-## How do I get started
-You can use the plugin anywhere in your websites content. First make sure you have some content to compare by adding items to the *This-or-That* post-type in the Admin. Make sure to add some featured images! When this has been done, you can add the shortcode `[thisorthat]` to any of your posts or pages.
-
-## How do I display the ranking list
-This van be done by using the shortcode `[thisorthat_ranking]`.
-
-## How to use my own Posts types?
-Add a 'posttype' variable to your shortcode. Example: `[thisorthat posttype="product"]`.
-
-## How can I use a certain category?
-Add a 'category' variable to your shortcode. Example: `[thisorthat category="holiday_pics"]`.
-By deafult, This-or-That will use the categories set under the *This-or-That* amin item. If you use a different post-type, it will generally have a different taxonomy. Therefore, you have to set which taxonomy you want to use.For example, if you want compare a category from WooCommerce you should use `[thisorthat taxonomy="product_cat" category="Sweaters"]`
+1. How do I get started
+...You can use the plugin anywhere in your websites content. First make sure you have some content to compare by adding items to the *This-or-That* post-type in the Admin. Make sure to add some featured images! When this has been done, you can add the shortcode `[thisorthat]` to any of your posts or pages.
+2. How do I display the ranking list
+...This van be done by using the shortcode `[thisorthat_ranking]`.
+1. How to use my own Posts types?
+...Add a 'posttype' variable to your shortcode. Example: `[thisorthat posttype="product"]`.
+1.How can I use a certain category?
+...Add a 'category' variable to your shortcode. Example: `[thisorthat category="holiday_pics"]`.
+...By deafult, This-or-That will use the categories set under the *This-or-That* amin item. If you use a different post-type, it will generally have a different taxonomy. Therefore, you have to set which taxonomy you want to use.For example, if you want compare a category from WooCommerce you should use `[thisorthat taxonomy="product_cat" category="Sweaters"]`
 
 ## How do I customize the 'voting' appearance?
 You can control which elements you want to show through a couple of *true* or *false* variables. These are:
